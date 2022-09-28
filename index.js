@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js')
 const access = require('./embs/access.js')
 const addRole = require('./interactions/addRole.js')
@@ -43,4 +44,4 @@ client.on('interactionCreate', interaction => {
 });
 
 
-client.login('MTAyMDg5NDI3MzE4MjM4NDIzOA.Gwzj76.MIfUOsJPdk3lRhdwD6lZrd6vyRMXk4rgrVBMlw')
+client.login(process.env.secret_key)
