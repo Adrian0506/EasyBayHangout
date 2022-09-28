@@ -43,5 +43,5 @@ module.exports = access = async (message) => {
 	.setTimestamp()
 	.setFooter({ text: 'Hangout Easy Bay', iconURL: 'https://seeklogo.com/images/U/university-of-california-berkeley-athletic-logo-815CB73082-seeklogo.com.png' });
     
-message.reply({ embeds: [accessEmbed], components: [roleList]});
+message.channel.send({ embeds: [accessEmbed], components: [roleList]});
 }

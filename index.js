@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js')
 const access = require('./embs/access.js')
 const addRole = require('./interactions/addRole.js')
+const notAdmin = require('./embs/notAdmin.js')
 
 const client = new Client({
     intents: [
@@ -30,7 +31,7 @@ client.on("messageCreate", async msg => {
     if (member.roles.cache.has('1020887997928976434')) {
      await access(msg)
     } else {
-      msg.reply('non admin')
+      await notAdmin(msg)
     }
   }
 })
