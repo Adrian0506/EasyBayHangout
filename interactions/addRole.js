@@ -15,5 +15,6 @@ module.exports = addRole = async (interaction) => {
         interaction.deferUpdate()
     } else if (interaction.customId === 'Other') {
         user.roles.add(other)
+        interaction.deferUpdate()
     }
 }
